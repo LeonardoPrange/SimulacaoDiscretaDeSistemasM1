@@ -10,6 +10,7 @@ namespace WebApiNetFramework.DAO
     public class WebApiNetFrameworkContext: DbContext
     {
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Imagem> Imagens { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

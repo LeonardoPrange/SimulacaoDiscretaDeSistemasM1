@@ -98,12 +98,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ImagemController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="DAO\ImagemDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\WebApiNetFrameworkContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710052356296_InitialCreate.cs" />
+    <Compile Include="Migrations\201710052356296_InitialCreate.Designer.cs">
+      <DependentUpon>201710052356296_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710081051533_CriacaoDasTabelas.cs" />
+    <Compile Include="Migrations\201710081051533_CriacaoDasTabelas.Designer.cs">
+      <DependentUpon>201710081051533_CriacaoDasTabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Imagem.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -118,6 +130,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710052356296_InitialCreate.resx">
+      <DependentUpon>201710052356296_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710081051533_CriacaoDasTabelas.resx">
+      <DependentUpon>201710081051533_CriacaoDasTabelas.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
