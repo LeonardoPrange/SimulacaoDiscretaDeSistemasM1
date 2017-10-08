@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetFramework", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetCore", "ConsoleAppNetCore\ConsoleAppNetCore.csproj", "{7DD656DB-DB30-477D-97D7-5E8F2DBB6B75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNetCore", "WebApiNetCore\WebApiNetCore.csproj", "{4BB9C95F-E6DA-4798-9461-FC3FACAFC84D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7DD656DB-DB30-477D-97D7-5E8F2DBB6B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DD656DB-DB30-477D-97D7-5E8F2DBB6B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DD656DB-DB30-477D-97D7-5E8F2DBB6B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB9C95F-E6DA-4798-9461-FC3FACAFC84D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB9C95F-E6DA-4798-9461-FC3FACAFC84D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB9C95F-E6DA-4798-9461-FC3FACAFC84D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB9C95F-E6DA-4798-9461-FC3FACAFC84D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
