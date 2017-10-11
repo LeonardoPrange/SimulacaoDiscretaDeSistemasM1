@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNetFramework", "WebAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetFramework", "ConsoleAppNetFramework\ConsoleAppNetFramework.csproj", "{89C13FEA-4F82-42E5-9A81-17BA359CC2C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetCore", "ConsoleAppNetCore\ConsoleAppNetCore.csproj", "{8C4B494A-8D61-4EEB-991E-2F073CBF897F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiNetCore", "WebApiNetCore\WebApiNetCore.csproj", "{20EEF108-B1CF-4CBC-85E0-20B1B4900937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{89C13FEA-4F82-42E5-9A81-17BA359CC2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89C13FEA-4F82-42E5-9A81-17BA359CC2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89C13FEA-4F82-42E5-9A81-17BA359CC2C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4B494A-8D61-4EEB-991E-2F073CBF897F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4B494A-8D61-4EEB-991E-2F073CBF897F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4B494A-8D61-4EEB-991E-2F073CBF897F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4B494A-8D61-4EEB-991E-2F073CBF897F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EEF108-B1CF-4CBC-85E0-20B1B4900937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EEF108-B1CF-4CBC-85E0-20B1B4900937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EEF108-B1CF-4CBC-85E0-20B1B4900937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EEF108-B1CF-4CBC-85E0-20B1B4900937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
