@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using WebApiNetFramework.Models;
+using System.Threading.Tasks;
+using WebApiNetCore.Models;
 
-namespace WebApiNetFramework.DAO
+namespace WebApiNetCore.DAO
 {
     public class UsuarioDAO
     {
-        private WebApiNetFrameworkContext context = new WebApiNetFrameworkContext();
+        private WebApiNetCoreContext context = new WebApiNetCoreContext();
 
         public void Adicionar(Usuario usuario)
         {
@@ -42,7 +42,6 @@ namespace WebApiNetFramework.DAO
 
             return listaDeUsuarios.ToList();
         }
-
         public IList<Usuario> ObterPorIdade(int idade)
         {
             var listaDeUsuarios = from usuario in context.Usuarios
