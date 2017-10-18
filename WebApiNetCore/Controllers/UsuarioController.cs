@@ -1,17 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Web.Http;
-using WebApiNetFramework.Context;
-using WebApiNetFramework.Models;
-namespace WebApiNetFramework.Controllers
+using System.Net;
+using Microsoft.AspNetCore.Mvc;
+using WebApiNetCore.Context;
+using WebApiNetCore.Models;
+
+namespace WebApiNetCore.Controllers
 {
-    [RoutePrefix("api/Usuario")]
-    public class UsuarioController : ApiController
+    [Route("api/[controller]")]
+    public class UsuarioController : Controller
     {
-        private WebApiNetFrameworkContext _context= new WebApiNetFrameworkContext();
+        private readonly WebApiNetCoreContext _context;
+
+        public UsuarioController (WebApiNetCoreContext context)
+        {
+            _context = context;
+        }
 
         [HttpPost]
         [Route("Cadastrar")]
@@ -19,37 +24,38 @@ namespace WebApiNetFramework.Controllers
         {
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         [HttpGet]
         [Route("ObterPorNome/{nome}")]
-        public HttpResponseMessage ObterPorNome(string nome)
+        public Object ObterPorNome(string nome)
         {
             var usuario = from _usuario in _context.Usuarios
                                   where _usuario.Nome.Equals(nome)
                                   select _usuario;
-            return Request.CreateResponse(HttpStatusCode.OK, usuario);
+            return usuario;
         }
 
         [HttpGet]
         [Route("ObterPorCPF/{cpf}")]
-        public HttpResponseMessage ObterPorCPF(string cpf)
+        public Object ObterPorCPF(string cpf)
         {
             var usuario = from _usuario in _context.Usuarios
                                   where _usuario.CPF.Equals(cpf)
                                   select _usuario;
-            return Request.CreateResponse(HttpStatusCode.OK, usuario);
+            return usuario;
         }
 
         [HttpGet]
-        [Route("ObterPorRG/{rg}")]
-        public HttpResponseMessage ObterPorRG(string rg)
+        [Route("ObterPorIdade/{idade}")]
+        public Object ObterPorRG(int rg)
         {
             var usuario = from _usuario in _context.Usuarios
                                   where _usuario.RG.Equals(rg)
                                   select _usuario;
-            return Request.CreateResponse(HttpStatusCode.OK, usuario);
+
+            return usuario;
         }
     }
 }

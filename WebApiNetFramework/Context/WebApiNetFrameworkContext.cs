@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using WebApiNetFramework.Models;
 
-namespace WebApiNetFramework.DAO
+namespace WebApiNetFramework.Context
 {
     public class WebApiNetFrameworkContext: DbContext
     {
