@@ -19,7 +19,8 @@ namespace WebApiNetCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<WebApiNetCoreContext>(options => options.UseInMemoryDatabase("WebApiNetCore"));
+            services.AddDbContext<WebApiNetCoreContext>(options =>
+            options.UseSqlServer("Data Source=DESKTOP-G1G612E;Initial Catalog=db.WebApiNetCore;Integrated Security=True;Pooling=False"));
             services.AddMvc();
         }
 

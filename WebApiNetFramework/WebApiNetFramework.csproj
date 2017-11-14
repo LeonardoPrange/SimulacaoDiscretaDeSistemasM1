@@ -105,13 +105,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710052356296_InitialCreate.cs" />
-    <Compile Include="Migrations\201710052356296_InitialCreate.Designer.cs">
-      <DependentUpon>201710052356296_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201711122347463_Initial.cs" />
+    <Compile Include="Migrations\201711122347463_Initial.Designer.cs">
+      <DependentUpon>201711122347463_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710081051533_CriacaoDasTabelas.cs" />
-    <Compile Include="Migrations\201710081051533_CriacaoDasTabelas.Designer.cs">
-      <DependentUpon>201710081051533_CriacaoDasTabelas.cs</DependentUpon>
+    <Compile Include="Migrations\201711130001239_id_usuario.cs" />
+    <Compile Include="Migrations\201711130001239_id_usuario.Designer.cs">
+      <DependentUpon>201711130001239_id_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711130013081_id_usuario3.cs" />
+    <Compile Include="Migrations\201711130013081_id_usuario3.Designer.cs">
+      <DependentUpon>201711130013081_id_usuario3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711130023207_id_usuario4.cs" />
+    <Compile Include="Migrations\201711130023207_id_usuario4.Designer.cs">
+      <DependentUpon>201711130023207_id_usuario4.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Imagem.cs" />
@@ -131,11 +139,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710052356296_InitialCreate.resx">
-      <DependentUpon>201710052356296_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711122347463_Initial.resx">
+      <DependentUpon>201711122347463_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710081051533_CriacaoDasTabelas.resx">
-      <DependentUpon>201710081051533_CriacaoDasTabelas.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711130001239_id_usuario.resx">
+      <DependentUpon>201711130001239_id_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711130013081_id_usuario3.resx">
+      <DependentUpon>201711130013081_id_usuario3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711130023207_id_usuario4.resx">
+      <DependentUpon>201711130023207_id_usuario4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

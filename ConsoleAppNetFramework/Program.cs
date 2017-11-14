@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,23 @@ namespace ConsoleAppNetFramework
     {
         static void Main(string[] args)
         {
+            var stopwatch = new Stopwatch();
+
             int numero = 0, quantidadeDePrimosEncontrados = 0, quantidadeDePrimos;
 
             Console.WriteLine("Digite a quantidade de primos que o sistema deve buscar: ");
             quantidadeDePrimos = Convert.ToInt32(Console.ReadLine());
+            stopwatch.Start();
             while (quantidadeDePrimosEncontrados != quantidadeDePrimos)
             {
                 if (EhPrimo(numero))
                     quantidadeDePrimosEncontrados++;
                 numero++;
             }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
             Console.WriteLine("FIM");
+            Console.ReadKey();
         }
         static bool EhPrimo(int numero)
         {

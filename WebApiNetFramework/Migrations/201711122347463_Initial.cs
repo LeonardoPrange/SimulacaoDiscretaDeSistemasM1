@@ -3,7 +3,7 @@ namespace WebApiNetFramework.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CriacaoDasTabelas : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
@@ -17,10 +17,24 @@ namespace WebApiNetFramework.Migrations
                     })
                 .PrimaryKey(t => t.ID);
             
+            CreateTable(
+                "dbo.Usuarios",
+                c => new
+                    {
+                        ID = c.Guid(nullable: false),
+                        Nome = c.String(),
+                        Idade = c.Int(nullable: false),
+                        CPF = c.String(),
+                        RG = c.String(),
+                        Email = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.Usuarios");
             DropTable("dbo.Imagems");
         }
     }

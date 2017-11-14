@@ -11,7 +11,7 @@ namespace WebApiNetFramework.Controllers
     [RoutePrefix("api/Usuario")]
     public class UsuarioController : ApiController
     {
-        private WebApiNetFrameworkContext _context= new WebApiNetFrameworkContext();
+        private WebApiNetFrameworkContext _context = new WebApiNetFrameworkContext();
 
         [HttpPost]
         [Route("Cadastrar")]
@@ -50,6 +50,14 @@ namespace WebApiNetFramework.Controllers
                                   where _usuario.RG.Equals(rg)
                                   select _usuario;
             return Request.CreateResponse(HttpStatusCode.OK, usuario);
+        }
+
+        [HttpGet]
+        [Route("ObterTodos")]
+        public HttpResponseMessage ObterTodos()
+        {
+            var usuarios = _context.Usuarios.ToList();
+            return Request.CreateResponse(HttpStatusCode.OK, usuarios);
         }
     }
 }

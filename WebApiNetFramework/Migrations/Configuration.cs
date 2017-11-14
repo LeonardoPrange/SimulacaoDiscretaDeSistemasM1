@@ -9,8 +9,7 @@ namespace WebApiNetFramework.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            ContextKey = "WebApiNetFramework.DAO.WebApiNetFrameworkContext";
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(WebApiNetFramework.Context.WebApiNetFrameworkContext context)

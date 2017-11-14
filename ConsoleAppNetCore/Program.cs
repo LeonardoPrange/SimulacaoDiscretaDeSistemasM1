@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace ConsoleAppNetCore
 {
@@ -6,17 +7,23 @@ namespace ConsoleAppNetCore
     {
         static void Main(string[] args)
         {
+            var stopwatch = new Stopwatch();
+            
             int numero = 0, quantidadeDePrimosEncontrados = 0, quantidadeDePrimos;
 
             Console.WriteLine("Digite a quantidade de primos que o sistema deve buscar: ");
             quantidadeDePrimos = Convert.ToInt32(Console.ReadLine());
+            stopwatch.Start();
             while (quantidadeDePrimosEncontrados != quantidadeDePrimos)
             {
                 if (EhPrimo(numero))
                     quantidadeDePrimosEncontrados++;
                 numero++;
             }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
             Console.WriteLine("FIM");
+            Console.ReadKey();
         }
         static bool EhPrimo(int numero)
         {
@@ -44,5 +51,4 @@ namespace ConsoleAppNetCore
 
         static bool ehPar(int numero) => (numero <= 1 || (numero != 2 && numero % 2 == 0));
     }
-}
 }

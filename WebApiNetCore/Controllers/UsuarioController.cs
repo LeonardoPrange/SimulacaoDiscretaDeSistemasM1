@@ -5,6 +5,7 @@ using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using WebApiNetCore.Context;
 using WebApiNetCore.Models;
+using System.Collections.Generic;
 
 namespace WebApiNetCore.Controllers
 {
@@ -20,11 +21,18 @@ namespace WebApiNetCore.Controllers
 
         [HttpPost]
         [Route("Cadastrar")]
-        public HttpResponseMessage Cadastrar(Usuario usuario)
+        public HttpResponseMessage Cadastrar([FromBody] Usuario usuario)
         {
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();
             return new HttpResponseMessage(HttpStatusCode.OK);
+        }
+
+        [HttpGet]
+        [Route("ObterTodos")]
+        public IList<Usuario> ObterTodos()
+        {
+            return _context.Usuarios.ToList();
         }
 
         [HttpGet]
